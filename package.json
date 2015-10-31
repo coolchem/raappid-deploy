@@ -1,6 +1,6 @@
 {
   "name": "raappid-deploy",
-  "description": "Complete application development tool",
+  "description": "Sytems to release and deploy raappid project",
   "version": "0.0.1",
   "author": {
     "name": "\"coolchem\" Varun Reddy Nalagatla"
@@ -13,6 +13,7 @@
   "bugs": {
     "url": "https://github.com/coolchem/raappid-deploy/issues"
   },
+  "license": "MIT",
   "licenses": [
     {
       "type": "MIT",
@@ -21,7 +22,7 @@
   ],
 
   "engines": {
-    "node": ">= 4.1.2"
+    "node": ">= 0.12"
   },
   "keywords": [
     "development"
@@ -29,8 +30,20 @@
   "dependencies": {
   },
   "devDependencies": {
+    "code": "^1.2.1",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-typescript": "^2.9.2",
+    "lab": "^5.1.0",
+    "typescript": "^1.6.2"
   },
-  "readmeFilename": "README.md",
-  "_id": "raappid-deploy@0.0.1",
-  "_from": "raappid-deploy@~0.0.1"
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "scripts": {
+    "prepublish": "npm test",
+    "test": "gulp build && lab -c -v"
+  }
 }
